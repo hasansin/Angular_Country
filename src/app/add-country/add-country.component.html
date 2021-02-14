@@ -1,0 +1,60 @@
+<h2>ADD Country</h2>
+<div class="row">
+    <div class="col-sm-4">
+    </div>
+
+    <div class="col-sm-4">
+        <div [hidden]="submitted" style="width: 500px;">
+            <form [formGroup]="countrysave" #saveCountry (ngSubmit)="saveCountry(saveCountry)">
+                <div class="form-group">
+                    <label for="name">Country name</label>
+                    <input type="text" class="form-control" formControlName="name"  data-toggle="tooltip" data-placement="right" title="Enter Country name">
+                    <div class="alert alert-danger" *ngIf ="(countryname.touched) && (countryname.invalid)">
+                        <span *ngIf = "countryname.errors.required">
+                            Country name is required
+
+                        </span>
+                        <span *ngIf ="countryname.errors.maxlength">
+                                too long !! Enter a short name.
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="name"> Nunmber of Cities:</label>
+                    <input type="number" class="form-control" formControlName="num_of_cities" data-toggle="tooltip" data-placement="right" title="Enter Number Of Cities">
+                    <div class="alert alert-danger" *ngIf ="(city.touched) && (city.invalid)">
+                        <span *ngIf = "countryname.errors.required">
+                            Country name is required
+
+                        </span>
+                        <span *ngIf ="countryname.errors.null">
+                                too long !! Enter a short name.
+                        </span>
+                    </div>
+                </div>
+                
+            <button type="submit" class="btn-success"> Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="col-sm-4"></div>
+
+
+
+<div class="row">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
+       <div [hidden]="!submitted"></div>
+       <h3>Country saved SuccessFully</h3>
+       <button (click)="  addcountryF()" class="btn-primary">Add another Country</button>
+   </div>
+
+</div>
+<div class="col-sm-4"></div>
+</div>
