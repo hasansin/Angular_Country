@@ -8,6 +8,7 @@ import { ListCountryComponent } from './list-country/list-country.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { HttpClientModule } from '@angular/common/http';  
 import {DataTablesModule} from 'angular-datatables';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {DataTablesModule} from 'angular-datatables';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
