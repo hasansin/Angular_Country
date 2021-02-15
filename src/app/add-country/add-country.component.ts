@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Country } from '../../../../countries/src/app/country';
+import { CountryService } from '../country.service';
 
 @Component({
   selector: 'app-add-country',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCountryComponent implements OnInit {
 
-  constructor(private Con: CountryServiceService) { }
+  constructor(private Con: CountryService) { }
   Coun : Country = new Country();
   submitted = false;
 

@@ -1,1 +1,39 @@
-<p>list-country works!</p>
+<div class="mat-elevation-z8">
+    <table mat-table >
+  
+        <-table [dataSource]="dataSource">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let coun">{{coun.id}} </td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let coun">{{coun.name}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let coun"> {{coun.num_of_cities}} </td>
+      </ng-container>
+  
+      
+      <ng-container>
+        <th mat-header-cell >  </th>
+        <td mat-cell > <button mat-button color="accent"> Delete</button> </td>
+      </ng-container>
+  
+      
+      <ng-container >
+        <th mat-header-cell >  </th>
+        <td mat-cell >  <button mat-button color="warn"> Update</button></td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  
