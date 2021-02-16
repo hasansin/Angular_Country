@@ -11,6 +11,15 @@
 
 *** to get database data, must run the spring boot application first and then run this application.
 
+##Material
+should insall the material module for a better user experience
+
+##Table 
+deleting and updating buttons are working. please reload the page in order to see the results.
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
@@ -41,10 +50,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-##Material
-should insall the material module for a better user experience
-
-##Table 
-deleting and updating buttons are working. please reload the page in order to see the results.
 
 
