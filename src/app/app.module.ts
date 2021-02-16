@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCountryComponent } from './add-country/add-country.component';
-import { ListCountryComponent } from './list-country/list-country.component';
+import { DialogCountry, ListCountryComponent } from './list-country/list-country.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { HttpClientModule } from '@angular/common/http';  
 //import {DataTablesModule} from 'angular-datatables';
@@ -12,14 +12,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
- 
-import { CdkTableModule ,DataSource} from '@angular/cdk/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {CdkColumnDef} from '@angular/cdk/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+
+//import {DialogNewDialog} from './deletedialog/deletedialog.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCountryComponent,
     ListCountryComponent,
+    DialogCountry,
+    
+    
     
   ],
   imports: [
@@ -32,12 +42,20 @@ import { CdkTableModule ,DataSource} from '@angular/cdk/table';
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDialogModule
     
-   
-    CdkTableModule
+     
     //DataTablesModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CdkColumnDef],
+  bootstrap: [AppComponent],
+  entryComponents: [DialogCountry,],
+  
+  
 })
 export class AppModule { }
+
+

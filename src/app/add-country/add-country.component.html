@@ -1,43 +1,33 @@
-<h2>ADD Country</h2>
-<!--<div class="row">
-    <div class="col-sm-4">
+
+<mat-toolbar><h2 style="margin-top: 5px;font-style: oblique;color :white;margin-left: 475px;">  ADD Country</h2> </mat-toolbar>
+<div >
+    <div >
     </div>
 
-    <div class="col-sm-4">
-        <div [hidden]="submitted" style="width: 500px;">
-            <form [formGroup]="countrysave" #saveCountry (ngSubmit)="saveCountry(saveCountry)">
+    <div >
+        <div [hidden]="submitted" style="width: 500px;align-self: center;margin-left: 350px;margin-top: 50px;">
+            <form [formGroup]="countrysave"  class="form" (ngSubmit)="saveCountry(saveCountry)">
                 <div class="form-group">
-                    <label for="name">Country name</label>
-                    <input type="text" class="form-control" formControlName="name"  data-toggle="tooltip" data-placement="right" title="Enter Country name">
-                    <div class="alert alert-danger" *ngIf ="(countryname.touched) && (countryname.invalid)">
-                        <span *ngIf = "countryname.errors.required">
-                            Country name is required
-
-                        </span>
-                        <span *ngIf ="countryname.errors.maxlength">
-                                too long !! Enter a short name.
-                        </span>
-                    </div>
+                    <mat-form-field style="width: 100%;margin-bottom: 50px;background-color: black ;" appearance="fill">
+                    <mat-label >Country name</mat-label>
+                    <input matInput type="text" formControlName="name" data-toggle="tooltip" style="color: grey;" >
+                    
+                </mat-form-field>
                 </div>
 
 
 
 
                 <div class="form-group">
-                    <label for="name"> Nunmber of Cities:</label>
-                    <input type="number" class="form-control" formControlName="num_of_cities" data-toggle="tooltip" data-placement="right" title="Enter Number Of Cities">
-                    <div class="alert alert-danger" *ngIf ="(city.touched) && (city.invalid)">
-                        <span *ngIf = "countryname.errors.required">
-                            Country name is required
-
-                        </span>
-                        <span *ngIf ="countryname.errors.null">
-                                too long !! Enter a short name.
-                        </span>
-                    </div>
+                    <mat-form-field style="width: 100%;margin-bottom: 50px;background-color: black;" appearance="fill">
+                    <mat-label > Nunmber of Cities:</mat-label>
+                    <input matInput type="number" formControlName="num_of_cities" data-toggle="tooltip" style="color: grey;"  >
+                    
+                    </mat-form-field>
+                    
                 </div>
                 
-            <button type="submit" class="btn-success"> Submit</button>
+            <button type="submit" mat-raised-button [disabled]="countryname.invalid || city.invalid"  color="accent" style="width: 100%;"> Submit</button>
             </form>
 
         </div>
@@ -50,14 +40,12 @@
 <div class="row">
    <div class="col-sm-4"></div>
    <div class="col-sm-4">
-       <div [hidden]="!submitted"></div>
-       <h3>Country saved SuccessFully</h3>
-       <button (click)="  addcountryF()" class="btn-primary">Add another Country</button>
+       <br>
+       <button (click)="  addcountryF()" mat-raised-button color="accent" style="width: 59%;margin-left: 350px;">Add another Country</button>
    </div>
 
 </div>
-<div class="col-sm-4"></div>
-</div> -->
+<div ></div>
+</div> 
 
-<h1>Hi</h1>
 

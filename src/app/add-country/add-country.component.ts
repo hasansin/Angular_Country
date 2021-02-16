@@ -20,7 +20,7 @@ export class AddCountryComponent implements OnInit {
   
   countrysave = new  FormGroup({
     name : new FormControl('',[Validators.required,Validators.maxLength(20)]),
-    num_of_cities : new FormControl('',Validators.required,Validators.nullValidator.arguments)
+    num_of_cities : new FormControl('',Validators.required)
   });
   
   saveCountry(saveCountry)
@@ -36,6 +36,7 @@ export class AddCountryComponent implements OnInit {
    this.Con.createCountry(this.Coun)
    .subscribe(data => console.log(data),error => console.log(error));
    this.Coun = new Country();
+   alert("Country Saved Successfully!");
  }
     
   get countryname(){
@@ -49,7 +50,7 @@ export class AddCountryComponent implements OnInit {
   addcountryF()
   {
     this.submitted= false;
-    this.countrysave.reset;
+    this.countrysave.reset();
   }
   
 

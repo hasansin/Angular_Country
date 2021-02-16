@@ -1,7 +1,8 @@
-import { AddCountryComponent } from './../../../countries/src/app/add-country/add-country.component';
+
 import { ListCountryComponent } from './list-country/list-country.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddCountryComponent } from './add-country/add-country.component';
 
 const routes: Routes = [
   {path: '',redirectTo:'List-country',pathMatch:'full'},

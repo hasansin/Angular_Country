@@ -1,0 +1,35 @@
+
+ 
+    <h1 mat-dialog-title> Update {{data.id}}</h1>
+    <div mat-dialog-content>
+        <p>Enter detail to update</p>
+        
+        <mat-form-field >
+            <mat-label>Name of the Country</mat-label>
+            <input matInput type="text" [(ngModel)]="data.name" name="name" [formControl]="nameValidator" [errorStateMatcher]="matcher"  required >
+            <mat-error *ngIf="nameValidator.invalid">Country name is required for Tasks</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Number of Cities in the Country</mat-label>
+            <input matInput  type="number"  [(ngModel)]="data.num_of_cities" name="num" [formControl]="numValidator" [errorStateMatcher]="matcher" required>
+            <mat-error *ngIf="numValidator.invalid">number of cities is required for Tasks</mat-error>
+        </mat-form-field>
+    </div>
+    
+    
+    <div mat-dialog-actions>
+        <button mat-button matDialogClose > Cancel</button>
+        <button mat-button  matDialogClose [disabled]="numValidator.invalid || nameValidator.invalid" (click)="updateCountry(data.id,data);"  > Confim</button>
+    
+    </div>
+    
+
+
+
+
+
+
+
+
+  
+  
