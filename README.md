@@ -1,4 +1,22 @@
-# Country
+# Angular_Country
+1. download vs code
+2. install vs code to the system
+3. insatll node.js - https://nodejs.org/en/download/
+4. insall angular cli - npm install -g @angular/cli(run this code in the vs code terminal)
+5. clone this project from https://github.com/hasansin/country.git
+6. add folder to the vs code workspace
+7. run the application -  ng serve(run this code in the vs code terminal of particular folder)
+
+*** to get database data, must run the spring boot application first and then run this application.
+
+##Material
+should insall the material module for a better user experience
+
+##Table 
+deleting and updating buttons are working. please reload the page in order to see the results.
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
@@ -13,6 +31,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+##Run the project
+
+use ng-serve in the terminal of vs code
 
 ## Running unit tests
 
